@@ -1,0 +1,13 @@
+# Target is a hard Forensics Question
+
+
+# Overall currently the main flow of the question flows like this:
+
+## Zip file contains 50-100 folders which are blocked by Steg and one which is not, this will be obvious that which one is openable.
+  ### The file can be named something like, You can readme etc.
+## This file will contain an image.
+## On Exiftooling that Image, you get the name of one of the other files in the zip file. That can be in a comment or the author etc
+## On binwalking the same image you get a Audio file which on analyzing will give you the password for it.
+## Possible analysis include spectrogram, waveform, morse code, oscilloscope.
+  ### I want to use oscilloscope since it's relatively lesser known imo.
+## Use the password to open the file which will have an image that will include the flag.
