@@ -1,4 +1,4 @@
-** Overall currently the main flow of the question flows like this:
+## Overall currently the main flow of the question flows like this:
 Zip file contains 50-100 folders which are blocked by Steg and one which is not, this will be obvious that which one is openable.
 Thi file will contain an image.
 On Exiftooling that Image, you get the name of one of the other files in the zip file. That can be in a comment or the author etc
