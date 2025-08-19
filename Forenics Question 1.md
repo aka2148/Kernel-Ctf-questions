@@ -1,13 +1,35 @@
-# Target is a hard Forensics Question
+#
+1. **Zip Archive**
+   - Contains **50–100 folders**.
+   - Most folders are blocked using steg, except **one openable folder** (easily identifiable).
+   - This folder contains an image file.
 
+2. **First Image**
+   - Found inside the accessible folder.
+   - **Exiftool Analysis** → reveals the name of another file inside the zip (hidden in a field like *comment* or *author*).
+         -That file will have the eventual flag.
+   - **Binwalk Analysis** → extracts an **audio file** hidden inside the image.
 
-# Overall currently the main flow of the question flows like this:
+3. **Audio Analysis**
+   - The audio encodes the **password** required to open the referenced file.
+   - Possible analysis methods:
+     - Spectrogram
+     - Waveform
+     - Morse code
+     - Oscilloscope (**preferred**: less commonly known imo)
 
-## Zip file contains 50-100 folders which are blocked by Steg and one which is not, this will be obvious that which one is openable.
-  ### The file can be named something like, You can readme etc.
-## This file will contain an image.
-## On Exiftooling that Image, you get the name of one of the other files in the zip file. That can be in a comment or the author etc
-## On binwalking the same image you get a Audio file which on analyzing will give you the password for it.
-## Possible analysis include spectrogram, waveform, morse code, oscilloscope.
-  ### I want to use oscilloscope since it's relatively lesser known imo.
-## Use the password to open the file which will have an image that will include the flag.
+4. **Password-Protected File**
+   - Use the extracted password to open the referenced file.
+   - Inside, you’ll find a **final image**.
+
+5. **Final Flag**
+   - The image contains the **flag**.
+
+---
+
+## 🧭 Summary of Steps
+- Unzip archive → find openable folder.  
+- Inspect first image with **Exiftool** and **Binwalk**.  
+- Extract hidden audio → analyze using **oscilloscope**.  
+- Recover password → open locked file.  
+- Obtain final image → extract **flag**.  
