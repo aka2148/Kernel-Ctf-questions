@@ -1,3 +1,14 @@
+ Title (name of challenge?)
+
+## Author 
+ak2148
+
+## Domain 
+Webex
+
+## Difficulty 
+medium
+
 Webex Question:
 **SQL Injection (password field only):**  
    - The backend query is similar to:  
