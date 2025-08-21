@@ -1,4 +1,15 @@
-#
+# Title 
+Hidden sounds
+
+## Author 
+ak2148
+
+## Domain 
+Forensics
+
+## Difficulty
+Medium-Hardish, im not sure
+
 1. **Zip Archive**
    - Contains **50–100 folders**.
    - Most folders are blocked using steg, except **one openable folder** (easily identifiable).
